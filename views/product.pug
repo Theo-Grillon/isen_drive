@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    hr
+    div
+        h3 Description:
+        div #{product.description}
+    div
+        h3 Prix:
+        div #{product.price} €
+    div
+        h3 Catégorie
+        div #{category}
+    hr
+    p
+        a.inline-10(href='/products/' + product._id + '/delete') Supprimer le produit
+        a.inline-10(href='/products/' + product._id + '/update') Modifier le produit
